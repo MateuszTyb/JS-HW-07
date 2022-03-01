@@ -1,7 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-
 const galleryBox = document.querySelector("div.gallery");
 
 console.log(galleryItems);
@@ -25,10 +24,19 @@ galleryItems.forEach((photo) => {
   galleryLink.append(galleryImage);
 });
 
-galleryBox.addEventListener("click", (event) => {
+galleryBox.addEventListener("click", function create(event) {
   event.preventDefault();
-  basicLightbox.create(`<img width="1280" src = ${event.target.dataSource}>`).show();
+
+  const box = basicLightbox.create(
+    `<img width="1280" src = ${event.target.dataSource}>`
+  );
+  box.show();
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      box.close();
+    }
+  });
 });
 
 console.log(galleryItems);
-

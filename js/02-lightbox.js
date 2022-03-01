@@ -24,9 +24,8 @@ galleryBox.addEventListener("click", (event) => {
 
 const gallery = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
-  captionSelector: 'img',
-  captionsData: 'alt',
-
+  captionSelector: "img",
+  captionsData: "alt",
 });
 
 console.log(gallery);
