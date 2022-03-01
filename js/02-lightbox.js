@@ -24,11 +24,9 @@ galleryBox.addEventListener("click", (event) => {
 
 const gallery = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
-  captionSelector: "img",
-  captionPosition: "bottom",
-  captionType: "text",
-  captionsData: "alt",
-  sourceAttr: "href",
+  captionSelector: 'img',
+  captionsData: 'alt',
+
 });
 
 console.log(gallery);
